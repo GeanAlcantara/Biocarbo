@@ -211,25 +211,34 @@ function ProductCard({
         <h3>{product.name}</h3>
         <p className="product-card__description">{product.description}</p>
 
-        <div className="product-card__highlight">
-          <Sparkles size={17} aria-hidden="true" />
-          <span>{product.highlight}</span>
-        </div>
+        <details className="product-card__more">
+          <summary>
+            <span>Detalhes e aplicações</span>
+            <ChevronDown size={17} aria-hidden="true" />
+          </summary>
 
-        <ul className="product-card__benefits" aria-label="Principais pontos">
-          {product.benefits.map((benefit) => (
-            <li key={benefit}>
-              <CircleCheck size={17} aria-hidden="true" />
-              <span>{benefit}</span>
-            </li>
-          ))}
-        </ul>
+          <div className="product-card__details">
+            <div className="product-card__highlight">
+              <Sparkles size={17} aria-hidden="true" />
+              <span>{product.highlight}</span>
+            </div>
 
-        <div className="tag-list" aria-label="Aplicações">
-          {product.applications.map((application) => (
-            <span key={application}>{application}</span>
-          ))}
-        </div>
+            <ul className="product-card__benefits" aria-label="Principais pontos">
+              {product.benefits.map((benefit) => (
+                <li key={benefit}>
+                  <CircleCheck size={17} aria-hidden="true" />
+                  <span>{benefit}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="tag-list" aria-label="Aplicações">
+              {product.applications.map((application) => (
+                <span key={application}>{application}</span>
+              ))}
+            </div>
+          </div>
+        </details>
 
         <div className="product-card__actions">
           <a
@@ -312,6 +321,10 @@ export default function LandingPage() {
             aria-label="Navegação principal"
             data-main-nav
           >
+            <div className="main-nav__mobile-head" aria-hidden="true">
+              <span>Menu</span>
+              <small>Carboquímica vegetal desde 1994</small>
+            </div>
             <a href="#solucoes">Soluções</a>
             <a href="#produtos">Produtos</a>
             <a href="#tecnologia">Tecnologia</a>
@@ -328,6 +341,13 @@ export default function LandingPage() {
               Falar com especialista
               <MessageCircle size={18} aria-hidden="true" />
             </a>
+            <div className="main-nav__mobile-footer">
+              <a href="tel:+553131917444">
+                <Phone size={16} aria-hidden="true" />
+                <span>(31) 3191-7444</span>
+              </a>
+              <p>Brumadinho e Morada Nova de Minas · MG</p>
+            </div>
           </nav>
 
           <button
@@ -493,6 +513,7 @@ export default function LandingPage() {
               </p>
             </div>
 
+            <p className="mobile-scroll-hint">Deslize para explorar as aplicações</p>
             <div className="applications__grid">
               {applicationCards.map((application) => {
                 const Icon = application.icon;
@@ -755,6 +776,7 @@ export default function LandingPage() {
               </p>
             </div>
 
+            <p className="mobile-scroll-hint">Acompanhe as etapas do processo</p>
             <div className="process">
               {processSteps.map((step, index) => {
                 const Icon = step.icon;

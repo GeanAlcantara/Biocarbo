@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-  "dev": "vinext dev",
+  "build": "next build",
   "build": "vinext build",
   "start": "vinext start",
   "lint": "eslint ."

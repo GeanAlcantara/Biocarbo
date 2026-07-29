@@ -26,3 +26,6 @@ next-env.d.ts
 # deployment archives
 *.tgz
 *.tar.gz
+
+Deploy.zip
+dist.zip

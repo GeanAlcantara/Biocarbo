@@ -22,7 +22,7 @@ npm run build
 npm run start
 ```
 
-O build gera a exportação estática em `dist/`, pronta para hospedagem.
+O build gera em `dist/` um bundle vinext compatível com a hospedagem Sites.
 
 ## Estrutura de conteúdo
 

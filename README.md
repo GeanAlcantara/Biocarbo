@@ -22,6 +22,8 @@ npm run build
 npm run start
 ```
 
+O build gera a exportação estática em `dist/`, pronta para hospedagem.
+
 ## Estrutura de conteúdo
 
 - `data/products.ts`: catálogo, categorias, textos, links técnicos e números de

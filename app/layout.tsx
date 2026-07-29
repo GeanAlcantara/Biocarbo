@@ -36,8 +36,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/images/hero-biorefinaria.webp",
-        width: 1821,
-        height: 864,
+        width: 1600,
+        height: 759,
         alt: "Agricultura e biorrefinaria conectadas pela tecnologia vegetal"
       }
     ]

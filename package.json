@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "dev": "next dev",
     "build": "next build",
-    "start": "vinext start",
-    "lint": "eslint .",
-    "dev": "next dev"
+    "start": "next start",
+    "lint": "eslint ."
   },
   "dependencies": {
     "lucide-react": "1.27.0",
